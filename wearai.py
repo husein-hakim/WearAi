@@ -51,7 +51,7 @@ Simulating real-world fashion fitting with high visual accuracy.
 app = FastAPI()
 
 @app.post("/generate")
-async def generate(user_images: list[UploadFile] = File(...), cloth: UploadFile = File(...)):
+async def generate(user_images: list[UploadFile] = File(...), cloth: UploadFile = File(...), prompt: prompt):
     temp_files = []
 
     try:
